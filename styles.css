@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    --theme-color: #e2e8f0;
+    --new-book-button-color: #86efac;
+    --edit-book-button-color: #7dd3fc;
+    --delete-book-button-color: #fda4af;
+    --line-color: #475569;
+}
+
+#content-container{
+    background-color: var(--theme-color);
+    min-height: 100vh;
+
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+#header-container{
+    height: fit-content;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: white;
+    border-bottom: 1px solid var(--line-color);
+}
+
+#header-left{
+
+    display: flex;
+    align-items: center;
+}
+
+#header-left img{
+    height: 60px;
+    width: 60px;
+    margin-right: 0.5rem;
+}
+
+#header-right{
+    display: flex;
+    align-items: center;
+}
+
+#add-button-container{
+    margin-left: 1rem;
+}
+
+#add-book-button{
+    padding: 1rem;
+    background-color: var(--new-book-button-color);
+    border-style: none;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    padding: 1rem;
+}
+
+#main-content{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 3rem;
+    background-color: var(--theme-color);
+}
+
+#main-content > div{
+    background-color: white;
+    height: 300px;
+}
+
+.book-card{
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 0px #94a3b8;
+}
+
+.book-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.book-title{
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.book-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.book-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    padding: 0.5rem 0rem;
+}
+
+.card-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.delete-button{
+    width: 100%;
+    padding: 0.5rem;
+    border-style: none;
+    background-color: var(--delete-book-button-color);
+}
+
+.btn-border-radius{
+    border-radius: 5px;
+}
+
+#new-book-dialog{
+    padding: 3rem;
+    margin: auto;
+    width: max(320px, 40%);
+    height: fit-content;
+    border-style: inset;
+    border: 2px solid var(--new-book-button-color);
+    transition: all 0.4ms;
+    border-radius: 10px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+form legend{
+    font-size: 2rem;
+}
+
+form label{
+    font-size: 1.5rem;
+}
+
+form input{
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+form select{
+    font-size: 1.3rem;
+    height: 3.3rem;
+}
+
+#read-option{
+    line-height: 3rem;
+    height: 3rem;
+}
+
+#not-read-option{
+    line-height: 3rem;
+    height: 3rem;
+}
+
+#form-buttons{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    justify-content: space-between;
+}
+
+#form-buttons button{
+    height: 100%;
+    flex-direction: row;
+    width: 49%;
+}   
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librario</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <dialog id="new-book-dialog">
+        <form method="dialog">
+            <legend>BOOK INFO</legend>
+            <div>
+                <label for="title-input" name="title">Book Title</label>
+                <input id="title-input" name="title" type="text">
+            </div>
+            <div>
+                <label for="author-input" name="author">Book Author</label>
+                <input id="author-input" name="author" type="text">
+            </div>
+            <div>
+                <label for="page-input" name="pages">Number of Pages</label>
+                <input id="page-input" name="pages" type="number">
+            </div>
+            <div>
+                <label for="book-status" name="status">Status</label>
+                <select id="book-status" name="status">
+                    <option id="read-option">Read</option>
+                    <option id="not-read-option">Not Read</option>
+                </select>
+            </div>
+            <div id="form-buttons">
+                <button id="form-submit-button" type="submit">Add</button>
+                <button type="reset">Clear Form</button>
+            </div>   
+        </form>
+    </dialog>
+    <div id="content-container">
+        <header>
+            <div id="header-container">
+                <div id="header-left">
+                    <img src="images/book-open.svg">
+                    <h1>Librarian</h1>
+                </div>
+                <div id="header-right">
+                    <div id="link-container">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>About</li>
+                                <li>Books</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="add-button-container">
+                        <button id="add-book-button" class="btn-border-radius">NEW BOOK</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="content">
+            <main>
+                <div id="main-content"></div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
