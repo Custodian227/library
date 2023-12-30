@@ -5,7 +5,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     --theme-color: #e2e8f0;
-    --new-book-button-color: #86efac;
+    --new-book-button-color: #6ee7b7;
+    --icon-color: #34d399;
     --edit-book-button-color: #7dd3fc;
     --delete-book-button-color: #fda4af;
     --line-color: #475569;
@@ -14,7 +15,6 @@
 #content-container{
     background-color: var(--theme-color);
     min-height: 100vh;
-
 }
 
 header{
@@ -33,7 +33,7 @@ header{
 }
 
 #header-left{
-
+    color: var(--icon-color);
     display: flex;
     align-items: center;
 }
@@ -79,13 +79,13 @@ nav ul li{
 
 #main-content > div{
     background-color: white;
-    height: 300px;
+    min-height: 30vh;
 }
 
 .book-card{
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0px 2px 20px 0px #94a3b8;
+    box-shadow: 0px 2px 20px 0px #94a3b8
 }
 
 .book-title-container{
@@ -106,7 +106,7 @@ nav ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50%;
+    min-height: 50%;
 }
 
 .book-info{
@@ -123,8 +123,15 @@ nav ul li{
     height: 30%;
 }
 
+.edit-button{
+    width: 49%;
+    padding: 0.5rem;
+    border-style: none;
+    background-color: var(--edit-book-button-color);
+}
+
 .delete-button{
-    width: 100%;
+    width: 49%;
     padding: 0.5rem;
     border-style: none;
     background-color: var(--delete-book-button-color);
@@ -134,7 +141,9 @@ nav ul li{
     border-radius: 5px;
 }
 
-#new-book-dialog{
+/* Dialogs */
+
+.book-dialog{
     padding: 3rem;
     margin: auto;
     width: max(320px, 40%);
@@ -148,6 +157,7 @@ nav ul li{
 form > div {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin: 1rem;
 }
 
@@ -169,17 +179,7 @@ form select{
     height: 3.3rem;
 }
 
-#read-option{
-    line-height: 3rem;
-    height: 3rem;
-}
-
-#not-read-option{
-    line-height: 3rem;
-    height: 3rem;
-}
-
-#form-buttons{
+.form-buttons{
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -187,11 +187,29 @@ form select{
     justify-content: space-between;
 }
 
-#form-buttons button{
+.form-buttons button{
     height: 100%;
     flex-direction: row;
     width: 49%;
 }   
+
+.close-button-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    aspect-ratio: 1 / 1;
+}
+
+.close-button{
+    border-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+iconify-icon{
+    font-size: 2rem;
+    color: var(--new-book-button-color);
+}
 
 
 

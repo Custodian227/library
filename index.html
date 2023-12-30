@@ -5,34 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librario</title>
     <link href="styles.css" rel="stylesheet">
+    
 </head>
 <body>
-    <dialog id="new-book-dialog">
+    <dialog id="new-book-dialog" class="book-dialog">
         <form method="dialog">
             <legend>BOOK INFO</legend>
-            <div>
-                <label for="title-input" name="title">Book Title</label>
-                <input id="title-input" name="title" type="text">
+            <div class="close-button-container">
+                <button id="add-book-close-button" class="close-button btn-border-radius">
+                    <iconify-icon icon="ph:x-fill"></iconify-icon>
+                </button>
             </div>
             <div>
-                <label for="author-input" name="author">Book Author</label>
-                <input id="author-input" name="author" type="text">
+                <label for="add-title-input" name="title">Book Title</label>
+                <input id="add-title-input" name="title" type="text">
             </div>
             <div>
-                <label for="page-input" name="pages">Number of Pages</label>
-                <input id="page-input" name="pages" type="number">
+                <label for="add-author-input" name="author">Book Author</label>
+                <input id="add-author-input" name="author" type="text">
             </div>
             <div>
-                <label for="book-status" name="status">Status</label>
-                <select id="book-status" name="status">
-                    <option id="read-option">Read</option>
-                    <option id="not-read-option">Not Read</option>
+                <label for="add-page-input" name="pages">Number of Pages</label>
+                <input id="add-page-input" name="pages" type="number">
+            </div>
+            <div>
+                <label for="add-book-status" name="status">Status</label>
+                <select id="add-book-status" name="status">
+                    <option class="read-option">Read</option>
+                    <option class="not-read-option">Not Read</option>
                 </select>
             </div>
-            <div id="form-buttons">
-                <button id="form-submit-button" type="submit">Add</button>
+            <div class="form-buttons">
+                <button id="add-form-submit-button" type="submit">Add</button>
                 <button type="reset">Clear Form</button>
-            </div>   
+            </div>
+        </form>
+    </dialog>
+    <dialog id="edit-book-dialog" class="book-dialog">
+        <form method="dialog">
+            <legend>EDIT BOOK INFO</legend>
+            <div class="close-button-container">
+                <button id="edit-book-close-button" class="close-button btn-border-radius">
+                    <iconify-icon icon="ph:x-fill"></iconify-icon>
+                </button>
+            </div>
+            <div>
+                <label for="edit-title-input" name="title">Book Title</label>
+                <input id="edit-title-input" name="title" type="text">
+            </div>
+            <div>
+                <label for="edit-author-input" name="author">Book Author</label>
+                <input id="edit-author-input" name="author" type="text">
+            </div>
+            <div>
+                <label for="edit-page-input" name="pages">Number of Pages</label>
+                <input id="edit-page-input" name="pages" type="number">
+            </div>
+            <div>
+                <label for="edit-book-status" name="status">Status</label>
+                <select id="edit-book-status" name="status">
+                    <option class="read-option">Read</option>
+                    <option class="not-read-option">Not Read</option>
+                </select>
+            </div>
+            <div class="form-buttons">
+                <button id="edit-form-submit-button" type="submit">EDIT</button>
+                <button type="reset">Clear Form</button>
+            </div>
         </form>
     </dialog>
     <div id="content-container">
@@ -65,8 +104,11 @@
                 <div id="main-content"></div>
             </main>
         </div>
-    </div>
+        <!-- Rectangular switch -->
+  <!-- Rounded switch -->
+
     
     <script src="app.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
